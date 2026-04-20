@@ -1,5 +1,7 @@
 # LibreSDRB210 - USRP B210 Setup Guide
 
+> **Important update:** This project has been updated for the **Artix-7 XC7A100T** version, including **IP upgrades** and **regenerated build targets**. It was successfully compiled on **Ubuntu MATE 24.04.4 LTS** using **Vivado ML Standard Edition 2024.1**. In addition, the source **DACx311_auto_spi.v** was modified, compiled, and successfully validated for the **DAC7311IDCKR**.
+
 This repository contains essential files and instructions for setting up the USRP B210 with custom firmware on Linux. Follow the steps below to install the required drivers and replace the default B210 image with the custom one from this repository.
 
 # Software and Information

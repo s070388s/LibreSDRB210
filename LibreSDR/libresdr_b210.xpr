@@ -4,12 +4,12 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="67" Path="/home/lvchenyang/.Xil/Vivado-21711-ubuntu/PrjAr/_X_/libresdr_b210.xpr">
+<Project Product="Vivado" Version="7" Minor="67" Path="/home/alex/Documents/PlatformIO/Projects/LibreSDRB210/LibreSDR/libresdr_b210.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="3701ff0892b640558ee900d8794aad86"/>
-    <Option Name="Part" Val="xc7a200tfbg484-2"/>
-    <Option Name="CompiledLibDir" Val="/home/lvchenyang/.Xil/Vivado-21711-ubuntu/PrjAr/_X_/libresdr_b210.cache/compile_simlib"/>
+    <Option Name="Part" Val="xc7a100tfgg484-2"/>
+    <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
     <Option Name="CompiledLibDirModelSim" Val="$PCACHEDIR/compile_simlib/modelsim"/>
     <Option Name="CompiledLibDirQuesta" Val="$PCACHEDIR/compile_simlib/questa"/>
@@ -1238,34 +1238,18 @@
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>
-    <FileSet Name="clk_wiz_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/clk_wiz_0" RelGenDir="$PGENDIR/clk_wiz_0">
-      <File Path="$PSRCDIR/sources_1/ip/clk_wiz_0/clk_wiz_0.xci">
+    <FileSet Name="fifo_4k_2clk" Type="BlockSrcs" RelSrcDir="$PSRCDIR/fifo_4k_2clk" RelGenDir="$PGENDIR/fifo_4k_2clk">
+      <File Path="$PSRCDIR/fifo_4k_2clk/ip/fifo_4k_2clk/fifo_4k_2clk.xci">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../workspace/SDR/usrp/myusrp/b210/libresdr_b210/libresdr_b210/libresdr_b210.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci"/>
-          <Attr Name="ImportTime" Val="1718424000"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../workspace/SDR/usrp/myusrp/b210/libresdr_b210/ip/fifo_4k_2clk/fifo_4k_2clk.xci"/>
+          <Attr Name="ImportTime" Val="1718424001"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <Config>
-        <Option Name="TopModule" Val="clk_wiz_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-        <Verilog_Define Name="TARGET_B210" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="gen_clks" Type="BlockSrcs" RelSrcDir="$PSRCDIR/gen_clks" RelGenDir="$PGENDIR/gen_clks">
-      <File Path="$PSRCDIR/gen_clks/ip/gen_clks/gen_clks.xci">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../workspace/SDR/usrp/myusrp/b210/libresdr_b210/ip/gen_clks/gen_clks.xci"/>
-          <Attr Name="ImportTime" Val="1718424005"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <Config>
-        <Option Name="TopModule" Val="gen_clks"/>
+        <Option Name="TopModule" Val="fifo_4k_2clk"/>
         <Option Name="UseBlackboxStub" Val="1"/>
         <Verilog_Define Name="TARGET_B210" Val="1"/>
       </Config>
@@ -1286,18 +1270,34 @@
         <Verilog_Define Name="TARGET_B210" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="fifo_4k_2clk" Type="BlockSrcs" RelSrcDir="$PSRCDIR/fifo_4k_2clk" RelGenDir="$PGENDIR/fifo_4k_2clk">
-      <File Path="$PSRCDIR/fifo_4k_2clk/ip/fifo_4k_2clk/fifo_4k_2clk.xci">
+    <FileSet Name="gen_clks" Type="BlockSrcs" RelSrcDir="$PSRCDIR/gen_clks" RelGenDir="$PGENDIR/gen_clks">
+      <File Path="$PSRCDIR/gen_clks/ip/gen_clks/gen_clks.xci">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../workspace/SDR/usrp/myusrp/b210/libresdr_b210/ip/fifo_4k_2clk/fifo_4k_2clk.xci"/>
-          <Attr Name="ImportTime" Val="1718424001"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../workspace/SDR/usrp/myusrp/b210/libresdr_b210/ip/gen_clks/gen_clks.xci"/>
+          <Attr Name="ImportTime" Val="1718424005"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <Config>
-        <Option Name="TopModule" Val="fifo_4k_2clk"/>
+        <Option Name="TopModule" Val="gen_clks"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+        <Verilog_Define Name="TARGET_B210" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="clk_wiz_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/clk_wiz_0" RelGenDir="$PGENDIR/clk_wiz_0">
+      <File Path="$PSRCDIR/sources_1/ip/clk_wiz_0/clk_wiz_0.xci">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../workspace/SDR/usrp/myusrp/b210/libresdr_b210/libresdr_b210/libresdr_b210.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci"/>
+          <Attr Name="ImportTime" Val="1718424000"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="clk_wiz_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
         <Verilog_Define Name="TARGET_B210" Val="1"/>
       </Config>
@@ -1325,7 +1325,7 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="22">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a200tfbg484-2" ConstrsSet="constrs_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1" ParallelReportGen="true">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tfgg484-2" ConstrsSet="constrs_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
@@ -1334,7 +1334,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="clk_wiz_0_synth_1" Type="Ft3:Synth" SrcSet="clk_wiz_0" Part="xc7a200tfbg484-2" ConstrsSet="clk_wiz_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/clk_wiz_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/clk_wiz_0_synth_1" ParallelReportGen="true">
+    <Run Id="fifo_4k_2clk_synth_1" Type="Ft3:Synth" SrcSet="fifo_4k_2clk" Part="xc7a100tfgg484-2" ConstrsSet="fifo_4k_2clk" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/fifo_4k_2clk_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/fifo_4k_2clk_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
         <Step Id="synth_design"/>
@@ -1343,7 +1343,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="gen_clks_synth_1" Type="Ft3:Synth" SrcSet="gen_clks" Part="xc7a200tfbg484-2" ConstrsSet="gen_clks" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/gen_clks_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/gen_clks_synth_1" ParallelReportGen="true">
+    <Run Id="fifo_short_2clk_synth_1" Type="Ft3:Synth" SrcSet="fifo_short_2clk" Part="xc7a100tfgg484-2" ConstrsSet="fifo_short_2clk" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/fifo_short_2clk_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/fifo_short_2clk_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
         <Step Id="synth_design"/>
@@ -1352,7 +1352,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="fifo_short_2clk_synth_1" Type="Ft3:Synth" SrcSet="fifo_short_2clk" Part="xc7a200tfbg484-2" ConstrsSet="fifo_short_2clk" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/fifo_short_2clk_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/fifo_short_2clk_synth_1" ParallelReportGen="true">
+    <Run Id="gen_clks_synth_1" Type="Ft3:Synth" SrcSet="gen_clks" Part="xc7a100tfgg484-2" ConstrsSet="gen_clks" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/gen_clks_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/gen_clks_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
         <Step Id="synth_design"/>
@@ -1361,7 +1361,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="fifo_4k_2clk_synth_1" Type="Ft3:Synth" SrcSet="fifo_4k_2clk" Part="xc7a200tfbg484-2" ConstrsSet="fifo_4k_2clk" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/fifo_4k_2clk_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/fifo_4k_2clk_synth_1" ParallelReportGen="true">
+    <Run Id="clk_wiz_0_synth_1" Type="Ft3:Synth" SrcSet="clk_wiz_0" Part="xc7a100tfgg484-2" ConstrsSet="clk_wiz_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/clk_wiz_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/clk_wiz_0_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
         <Step Id="synth_design"/>
@@ -1370,7 +1370,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a200tfbg484-2" ConstrsSet="constrs_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1" LaunchOptions="-jobs 8 " AutoRQSDir="$PSRCDIR/utils_1/imports/impl_1" ParallelReportGen="true">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a100tfgg484-2" ConstrsSet="constrs_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1" LaunchOptions="-jobs 8 " AutoRQSDir="$PSRCDIR/utils_1/imports/impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
@@ -1389,7 +1389,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="clk_wiz_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tfbg484-2" ConstrsSet="clk_wiz_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="clk_wiz_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/clk_wiz_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/clk_wiz_0_impl_1" ParallelReportGen="true">
+    <Run Id="fifo_4k_2clk_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tfgg484-2" ConstrsSet="fifo_4k_2clk" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="fifo_4k_2clk_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/fifo_4k_2clk_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/fifo_4k_2clk_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024"/>
         <Step Id="init_design"/>
@@ -1406,7 +1406,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="gen_clks_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tfbg484-2" ConstrsSet="gen_clks" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="gen_clks_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/gen_clks_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/gen_clks_impl_1" ParallelReportGen="true">
+    <Run Id="fifo_short_2clk_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tfgg484-2" ConstrsSet="fifo_short_2clk" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="fifo_short_2clk_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/fifo_short_2clk_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/fifo_short_2clk_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024"/>
         <Step Id="init_design"/>
@@ -1423,7 +1423,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="fifo_short_2clk_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tfbg484-2" ConstrsSet="fifo_short_2clk" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="fifo_short_2clk_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/fifo_short_2clk_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/fifo_short_2clk_impl_1" ParallelReportGen="true">
+    <Run Id="gen_clks_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tfgg484-2" ConstrsSet="gen_clks" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="gen_clks_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/gen_clks_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/gen_clks_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024"/>
         <Step Id="init_design"/>
@@ -1440,7 +1440,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="fifo_4k_2clk_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tfbg484-2" ConstrsSet="fifo_4k_2clk" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="fifo_4k_2clk_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/fifo_4k_2clk_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/fifo_4k_2clk_impl_1" ParallelReportGen="true">
+    <Run Id="clk_wiz_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tfgg484-2" ConstrsSet="clk_wiz_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="clk_wiz_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/clk_wiz_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/clk_wiz_0_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024"/>
         <Step Id="init_design"/>
